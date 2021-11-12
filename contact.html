@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshio</title>
+  <!-- slick css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <!-- /slick css -->
+  <!-- icons link -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- /icons link -->
+  <!-- bottstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- /bootstrap css -->
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- /main css -->
+</head>
+<body>
+
+  <!-- header -->
+  <header id="about-header">
+
+    <!-- header center -->
+    <section class="header-center container-fluid px-0">
+      <div class="header-center__container-fluid">
+        <div class="header-center__container container">
+          <div class="header-center__d-flex d-flex align-items-center justify-content-between">
+            <!-- offcanvas -->
+            <div class="header-center__offcanvas d-block d-lg-none">
+              <button class="header-center__menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="fal fa-bars"></i></button>
+              <div class="header-center__ofcanvas-inner offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="header-center__offcanvas-header offcanvas-header">
+                  <button class="header-center__btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="header-center__close-icon fal fa-times"></i>Close</button>
+                </div>
+                <div class="header-center__offcanvas-body offcanvas-body p-0">
+                  <ul class="header-center__offcanvas-list">
+                    <li class="header-center__offcanvas-item d-flex align-items-center justify-content-between">
+                      <button class="header-center__offcanvas-link text-hover" href="#">home</button>
+                      <button class="header-center__ofcanvas-arrow-btn"><i class="header-center__offcanvas-icon fal fa-chevron-double-right"></i></button>
+                    </li>
+                    <li class="header-center__offcanvas-item d-flex align-items-center justify-content-between">
+                      <button class="header-center__offcanvas-link text-hover" href="#">shop</button>
+                      <button class="header-center__ofcanvas-arrow-btn"><i class="header-center__offcanvas-icon fal fa-chevron-double-right"></i></button>
+                    </li>
+                    <li class="header-center__offcanvas-item d-flex align-items-center justify-content-between">
+                      <button class="header-center__offcanvas-link text-hover" href="#">pages</button>
+                      <button class="header-center__ofcanvas-arrow-btn"><i class="header-center__offcanvas-icon fal fa-chevron-double-right"></i></button>
+                    </li>
+                    <li class="header-center__offcanvas-item d-flex align-items-center">
+                      <button class="header-center__offcanvas-link" href="#">blog</button>
+                    </li>
+                    <li class="header-center__offcanvas-item d-flex align-items-center">
+                      <button class="header-center__offcanvas-link" href="#">contact</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /offcanvas -->
+            <a class="header-center__logo-link" href="index.html">
+              <img class="header-center__logo logo" src="img/site-logo.jpg" alt="site-logo">
+            </a>
+            <form class="header-center__form align-items-center justify-content-between" action="https://echo.htmlacademy.ru/">
+              <input class="header-center__input" type="text" placeholder="Enter Keyword" id="search" name="search">
+              <button class="header-center__form-btn black-link" type="submit">Search</button>
+            </form>
+            <ul class="header-center__list d-flex">
+              <li class="header-center__item"><button class="header-center__item-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="header-center__icon fal fa-user"></i></button></li>
+              <li class="header-center__item"><button class="header-center__item-btn"><i class="header-center__icon fal fa-heart"></i><span class="header-center__count">0</span></button></li>
+              <li class="header-center__item"><button class="header-center__item-btn"><i class="header-center__icon fal fa-shopping-basket"></i><span class="header-center__count">0</span></button></li>
+            </ul>
+          </div>
+          <!-- right offcanvas -->
+          <div class="header-center__modal header-modal">
+            <div class="header-modal__offcanvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="header-modal__offcanvas-body offcanvas-body py-0">
+                <div class="header-modal__offcanvas-header d-flex align-items-center justify-content-between px-0">
+                  <img class="header-center__logo logo" src="img/site-logo.jpg" alt="site-logo">
+                  <button class="header-modal__btn-close text-hover" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="header-modal__close-icon fal fa-times"></i></button>
+                </div>
+                <p class="header-modal__green-text">Existing Account Login</p>
+                <form class="header-modal__form" action="https://echo.htmlacademy.ru/" method="get">
+                  <label class="header-modal__label d-flex" for="email">
+                    <input class="header-modal__input" type="email" placeholder="Email Address" name="email" id="email" required>
+                  </label>
+                  <label class="header-modal__label header-modal__label-password d-flex" for="password">
+                    <input class="header-modal__input header-modal__input-password" type="password" placeholder="Password" name="password" id="password" required>
+                    <i class='header-modal__icon bx bx-key bx-rotate-90' ></i>
+                  </label>
+                  <div class="header-modal__check-content d-flex justify-content-between align-items-center">
+                    <label class="header-modal__check-label d-flex align-items-center" for="check-remember">
+                      <input class="header-modal__input-check" type="checkbox" name="remember me">Remember Me
+                    </label>
+                    <!-- accardion -->
+                    <div class="header-modal__accardion accordion accordion-flush" id="accordionFlushExample">
+                      <button class="header-modal__accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Forgot Password?</button>
+                    </div>
+                  </div>
+                  <button class="header-modal__accardion-btn" type="submit">Login</button>
+                  <!-- /accardion -->
+                </form>
+                <div class="header-modal__accordion-collapse accordion-collapse collapse p-0" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="header-modal__accordion-body">
+                    <p class="header-modal__accardion-text">Reset Password</p>
+                  </div>
+                  <form class="header-modal__form" action="https://echo.htmlacademy.ru/" method="get" id="reset-email">
+                    <label class="header-modal__label d-flex" for="email">
+                      <input class="header-modal__input" type="email" placeholder="Email Address" name="email" id="email" required>
+                    </label>
+                    <button class="header-modal__accardion-btn" type="submit">Reset Password</button>
+                  </form>
+                </div>
+                <p class="header-modal__green-text">Connect with Social Networks</p>
+                <ul class="header-modal__list d-flex">
+                  <li class="header-modal__item"><a class="header-modal__link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="header-modal__item"><a class="header-modal__link" href="#" target="_blank"><i class="fab fa-google"></i></a></li>
+                  <li class="header-modal__item"><a class="header-modal__link" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+                <!-- form qismini qilish kere inputlariga keganman -->
+                <p class="header-modal__green-text">New Account Register</p>
+                <form class="header-modal__form" action="https://echo.htmlacademy.ru/" method="get">
+                  <label class="header-modal__label d-flex" for="fname">
+                    <input class="header-modal__input" type="fname" placeholder="First Name" name="fname" id="fname" required>
+                  </label>
+                  <label class="header-modal__label d-flex" for="lname">
+                    <input class="header-modal__input" type="lname" placeholder="Last Name" name="lname" id="lname" required>
+                  </label>
+                  <label class="header-modal__label d-flex" for="email">
+                    <input class="header-modal__input" type="email" placeholder="Email Address" name="email" id="email" required>
+                  </label>
+                  <label class="header-modal__label header-modal__label-password d-flex" for="password">
+                    <input class="header-modal__input header-modal__input-password" type="password" placeholder="Password" name="password" id="password" required>
+                    <i class='header-modal__icon bx bx-key bx-rotate-90' ></i>
+                  </label>
+                  <label class="header-modal__check-label d-flex align-items-center mb-3" for="check-remember">
+                    <input class="header-modal__input-check" type="checkbox" name="remember me">I agree to the terms.
+                  </label>
+                  <button class="header-modal__accardion-btn" type="submit">Create an Account</button>
+                </form>
+                <!-- /accardion -->
+                <div class="header-modal__lang row align-items-center">
+                  <div class="header-modal__lang-col col-6">
+                    <p class="header-modal__lang-text">Language:</p>
+                    <ul class="header-modal__lang-list">
+                      <li class="header-modal__lang-item header-modal__lang-item--active">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/america.jpg" alt="lang">
+                        </a>
+                      </li>
+                      <li class="header-modal__lang-item">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/france.jpg" alt="lang">
+                        </a>
+                      </li>
+                      <li class="header-modal__lang-item">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/germany.jpg" alt="lang">
+                        </a>
+                      </li>
+                      <li class="header-modal__lang-item">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/qatar.jpg" alt="lang">
+                        </a>
+                      </li>
+                      <li class="header-modal__lang-item">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/italy.jpg" alt="lang">
+                        </a>
+                      </li>
+                      <li class="header-modal__lang-item">
+                        <a class="header-modal__lang-link" href="#">
+                          <img class="header-modal__lang-img" src="img/spain.jpg" alt="lang">
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="header-modal__lang-text">Currency:</p>
+                    <button class="header-modal__lang-btn">ENG</button>
+                    <button class="header-modal__lang-btn header-modal__lang-btn--active">USD</button>
+                  </div>
+                  <div class="header-modal__lang-col col-6 p-0">
+                    <ul class="header-modal__account-list">
+                      <li class="header-modal__account-item d-flex align-items-center"><a class="header-modal__account-link" href="#" target="_blank"><i class="header-modal__account-icon fad fa-sign-in"></i>Sign in</a></li>
+                      <li class="header-modal__account-item d-flex align-items-center"><a class="header-modal__account-link" href="#" target="_blank"><i class="header-modal__account-icon fal fa-user"></i>My account</a></li>
+                      <li class="header-modal__account-item d-flex align-items-center"><a class="header-modal__account-link" href="#" target="_blank"><i class="header-modal__account-icon fal fa-heart"></i>Wishlist (0)</a></li>
+                      <li class="header-modal__account-item d-flex align-items-center"><a class="header-modal__account-link" href="#" target="_blank"><i class="header-modal__account-icon fal fa-copy"></i>Compare (0)</a></li>
+                      <li class="header-modal__account-item d-flex align-items-center"><a class="header-modal__account-link" href="#" target="_blank"><i class="header-modal__account-icon fal fa-check-square"></i>Checkout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /right offcanvas -->
+        </div>
+      </div>
+    </section>
+    <!-- /header center -->
+
+    <!-- header bottom -->
+    <section class="header-bottom">
+      <div class="header-bottom__content">
+          <div class="header-bottom__container container d-flex align-items-center">
+          <div class="header-bottom__menu header-menu">
+            <!-- header menu dropdown -->
+            <div class="header-menu__btn-group btn-group">
+              <button class="header-menu__btn" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"><i class="header-menu__btn-icon fal fa-bars"></i>Shop by Department</button>
+              <ul class="header-menu__dropdown-list dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-salad"></i>Fruits $ Vegetables</a></li>
+                <li class="header-menu__dropdown-item"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-meat"></i>Supplyments</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-egg-fried"></i>Dairy Bread & Eggs</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-pizza-slice"></i>Package Foods</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-apple-alt"></i>Beauty & Care</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-volleyball-ball"></i>Health & Wellness</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-ice-cream"></i>Baby & Infants</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-leaf"></i>Home Care</a></li>
+                <li class="header-menu__dropdown-item"><a class="header-menu__dropdown-link" href="#"><i class="header-menu__dropdown-icon fal fa-badge-percent"></i>Hot Offers</a></li>
+              </ul>
+            </div>
+            <!-- /header menu dropdown -->
+
+          </div>
+          <nav class="header-bottom__nav header-nav">
+            <ul class="header-nav__list d-none d-lg-flex">
+              <li class="header-nav__item"><a class="header-nav__link white-link" href="#" target="_blank">Home<i class="header-nav__icon fal fa-chevron-down"></i></a>
+                <ul class="header-nav__home-list">
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 1</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 2</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 3</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 4</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 5</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 6</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 7</a></li>
+                  <li class="header-nav__home-item"><a class="header-nav__home-link" href="#">Home 8</a></li>
+                </ul>
+              </li>
+              <li class="header-nav__item"><a class="header-nav__link white-link" href="#" target="_blank">Shop<i class="header-nav__icon fal fa-chevron-down"></i></a>
+                <div class="header-nav__shop row">
+                  <div class="header-nav__shop-col col-3">
+                    <h3 class="header-nav__shop-title text-hover">Categories 1</h3>
+                    <ul class="header-nav__shop-list">
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Vegatable</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Tomato</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Cabbage</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Juice</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Meat</a></li>
+                    </ul>
+                  </div>
+                  <div class="header-nav__shop-col col-3">
+                    <h3 class="header-nav__shop-title text-hover">Categories 2</h3>
+                    <ul class="header-nav__shop-list">
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Beef</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Park</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Cocount</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Brocoli</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fish</a></li>
+                    </ul>
+                  </div>
+                  <div class="header-nav__shop-col col-3">
+                    <h3 class="header-nav__shop-title text-hover">Categories 3</h3>
+                    <ul class="header-nav__shop-list">
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Seafood</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Octopus</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fish</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Park</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">More</a></li>
+                    </ul>
+                  </div>
+                  <div class="header-nav__shop-col col-3">
+                    <h3 class="header-nav__shop-title text-hover">Categories 4</h3>
+                    <ul class="header-nav__shop-list">
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Vegatables</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fresh Meat</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fruit & Nut Gifts</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fresh Berries</a></li>
+                      <li class="header-nav__shop-item"><a class="header-nav__shop-link text-hover" href="#" target="_blank">Fat Freezing</a></li>
+                    </ul>
+                  </div>
+                </div>
+              
+              </li>
+              <li class="header-nav__item"><a class="header-nav__link white-link" href="#" target="_blank">Pages<i class="header-nav__icon fal fa-chevron-down"></i></a>
+                <div class="header-nav__pages">
+                  <ul class="header-nav__pages-list d-flex">
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-1.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-2.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-3.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-4.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-5.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-6.jpg" alt="pages">
+                      </a>
+                    </li>
+                    <li class="header-nav__pages-item">
+                      <a class="header-nav__pages-link" href="#" target="_blank">
+                        <img class="header-nav__pages-img" src="img/pages-7.jpg" alt="pages">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header-nav__item"><a class="header-nav__link white-link" href="#" target="_blank">Blog</a></li>
+              <li class="header-nav__item"><a class="header-nav__link white-link" href="#" target="_blank">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- header menu bottom -->
+    <ul class="header-menu__list d-flex d-lg-none row align-items-center">
+      <button class="header-menu__item col-3">
+        <i class="header-menu__icon d-block fal fa-store"></i>
+        <a class="header-menu__link" href="#">shop</a>
+      </button>
+      <button class="header-menu__item col-3">
+        <i class="header-menu__icon d-block fal fa-heart"><span class="header-menu__number">0</span></i>
+        <a class="header-menu__link" href="#">wishlist</a>
+      </button>
+      <button class="header-menu__item col-3"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="header-menu__icon d-block fal fa-user"></i>
+        <a class="header-menu__link" href="#">Account</a>
+      </button>
+      <button class="header-menu__item col-3">
+        <i class="header-menu__icon d-block fal fa-search"></i>
+        <a class="header-menu__link" href="#">Search</a>
+      </button>
+    </ul>
+    <a class="header-menu__site-scroll-top" href="#"><i class="fal fa-chevron-double-up"></i></a>
+    <!-- /header menu bottom -->
+    <!-- /header bottom -->
+  </header>
+  <!-- /header -->
+
+  <!-- main -->
+  <main id="about-main">
+    <!-- about hero -->
+    <section class="about-hero">
+      <div class="about-hero__container container">
+        <div class="about-hero__content">
+          <ol class="about-hero__list d-flex">
+            <li class="about-hero__item">
+              <a class="about-hero__link text-hover" href="index.html">Home <i class="about-hero__link-icon fal fa-angle-right"></i></a>
+            </li>
+            <li class="about-hero__item">
+              <a class="about-hero__link text-hover" href="#">Contact us</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- /about hero -->
+
+    <!-- contact form -->
+    <section class="contact-form">
+      <div class="contact-form__container container">
+        <div class="contact-form__row row">
+          <div class="contact-form__col col-3">
+            <h3 class="contact-form__info-title">store information</h3>
+            <div class="contact-form__info-inner d-flex align-items-center">
+              <i class="contact-form__info-icon fas fa-map-marker-alt"></i>
+              <div class="contact-form__info-desc">
+                <p class="contact-form__info-text">Freshio</p>
+                <p class="contact-form__info-text">France</p>
+              </div>
+            </div>
+            <div class="contact-form__info-inner d-flex align-items-center">
+              <i class="contact-form__info-icon fas fa-envelope"></i>
+              <div class="contact-form__info-desc">
+                <p class="contact-form__info-text">Email us:</p>
+                <p class="contact-form__info-text text-hover">demo@demo.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form__col col-9">
+            <form class="contact-form__inner" action="https://echo.htmlacademy.ru/">
+    
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about contact -->
+    <section class="about-contact">
+      <div class="about-contact__container container">
+        <div class="about-contact__inner d-block d-lg-flex align-items-center justify-lg-content-between">
+          <ul class="about-contact__list d-block d-lg-flex">
+            <li class="about-contact__item d-block d-lg-flex text-md-center align-items-center">
+              <i class="about-contact__icon fal fa-headphones-alt"></i>
+              <div class="about-contact__content">
+                <p class="about-contact__title">CALL US 24/7</p>
+                <a class="about-contact__link text-hover" href="tel:45489456564">(1800)-88-66-991</a>
+              </div>
+            </li>
+            <li class="about-contact__item d-block d-lg-flex text-md-center align-items-center">
+              <i class="about-contact__icon fal fa-envelope-open-text"></i>
+              <div class="about-contact__content">
+                <p class="about-contact__title">CALL US 24/7</p>
+                <p class="about-contact__email d-inline-block text-hover">demo@demo.com</p>
+              </div>
+            </li>
+          </ul>
+          <img class="about-contact__img" src="img/partners-img.png" alt="partners">
+        </div>
+      </div>
+    </section>
+    <!-- /about contact -->
+
+  </main>
+  <!-- /main -->
+  
+  <!-- footer -->
+  <footer id="about-footer">
+    <section class="site-footer">
+      <div class="site-footer__container-fluid container-fluid px-0">
+        <div class="site-footer__container container">
+          <div class="site-footer__inner row text-center text-md-start">
+            
+            <div class="site-footer__col col-12 col-md-4 col-lg-3">
+              <a class="site-footer__logo-link" href="index.html">
+                <img class="site-footer__logo" src="img/site-logo.jpg" alt="logo">
+              </a>
+            </div>
+            <div class="site-footer__col col-12 col-md-4 col-lg-3 mb-4 mb-lg-0">
+              <h4 class="site-footer__title">store location</h4>
+              <p class="site-footer__text">9066 Green Lake Drive Chevy Chase, MD 20815</p>
+              <p class="site-footer__white-text">Monday - Saturday:</p>
+              <p class="site-footer__time-text">8:00 am - 4:00pm</p>
+              <p class="site-footer__white-text">Sunday:</p>
+              <p class="site-footer__time-text">9:00 am - 5:00pm</p>
+            </div>
+            <div class="site-footer__col col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
+              <h4 class="site-footer__title">information</h4>
+              <ul class="site-footer__list">
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">About us</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Blog</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Check out</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Contact</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Service</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col col-12 col-md-4 col-lg-2 mb-4 mb-lg-0">
+              <h4 class="site-footer__title">my account</h4>
+              <ul class="site-footer__list">
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">My Account</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Contact</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Shopping cart</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Shop</a></li>
+              </ul>
+            </div>
+            <div class="site-footer__col col-12 col-md-4 col-lg-2">
+              <h4 class="site-footer__title">categories</h4>
+              <ul class="site-footer__list">
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Fruits & Vegetables</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Dairy Products</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Package Foods</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Beverage</a></li>
+                <li class="site-footer__item"><a class="site-footer__link text-hover" href="#">Beverage</a></li>
+              </ul>
+            </div>
+          </div>
+          <p class="site-footer__copy text-center py-3 py-md-5">Copyright © 2021 <span class="site-footer__copy-green">Freshio</span>. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- /footer -->
+  
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- /bootstrap js -->
+  <!-- jquery js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js/slick.js"></script>
+  <!-- /jquery js -->
+  <!-- main js -->
+  <script src="js/main.js">
+    
+  </script>
+  <!-- /main js -->
+</body>
+</html>

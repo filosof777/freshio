@@ -1,0 +1,71 @@
+.site-fruit {
+
+  &__list {
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  &__item {
+    display: flex;
+    padding: 60px 15px;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $bg-green;
+      transition: width 0.4s ease;
+
+    }
+    &:hover:after {
+      width: 100%;
+    }
+    
+    &::before {
+      @include before-after(62px, 64px);
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("../../../img/fruit-1.png");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../../../img/fruit-2.png");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../../../img/fruit-3.png");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("../../../img/fruit-4.png");
+    }
+  }
+
+  &__inner {
+    width: 180px;
+    margin-left: 20px;
+  }
+
+  &__title {
+    @include font-mazzard(400, 16px, $bg-green); 
+  }
+
+  &__text {
+    @include font-mazzard(400, 12px, #555); 
+  }
+}
+
+@include breakpoint-down($max-xs) {
+  .site-fruit__item {
+    padding: 30px 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+}

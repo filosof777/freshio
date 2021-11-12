@@ -1,0 +1,58 @@
+// text
+.text-normal {
+  @include font-mazzard(400, 14px, $color-dark);
+}
+
+.text-hover {
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: $bg-light-green;
+  }
+}
+
+// link
+.text-link{
+  @include font-mazzard(400, 12px, #555);
+  text-transform: uppercase;
+  transition: color 0.4s ease;
+  
+  &:hover {
+    color: $bg-light-green;
+  }
+}
+
+.black-link{
+  @include font-mazzard(700, 14px, $color-dark);
+  transition: color 0.4s ease;
+  
+  &:hover {
+    color: $bg-light-green;
+  }
+}
+
+.white-link{
+  @include font-mazzard(700, 14px, $bg-light);
+  transition: color 0.4s ease;
+  
+  &:hover {
+    color: $bg-light-green;
+  }
+}
+
+// amination
+
+.text-animation {
+  transform: translateX(0);
+  animation: animate-text 1s 1 ease ;
+
+  @keyframes animate-text {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+} 

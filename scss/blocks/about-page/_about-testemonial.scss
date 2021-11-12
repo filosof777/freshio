@@ -1,0 +1,32 @@
+.about-testemonial {
+  background-color: #fff;
+  padding: 40px 0;
+
+  &__title {
+    @include font-mazzard(400, 24px, $bg-green);
+    margin-bottom: 8px;
+  }
+
+  &__inner {
+    padding: 20px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__subtitle {
+    @include font-mazzard(400, 18px, $bg-green);
+    margin-bottom: 8px;
+  }
+
+  &__text-bold {
+    @include font-mazzard(700, 14px, #aaa);
+  }
+
+  &__text {
+    @include font-mazzard(400, 14px, #aaa);
+  }
+}

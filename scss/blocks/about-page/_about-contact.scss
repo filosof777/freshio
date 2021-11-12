@@ -1,0 +1,56 @@
+.about-contact {
+  background-color: #fff;
+
+  &__inner {
+    justify-content: space-between;
+  }
+
+  &__list {
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+
+  &__icon {
+    font-size: 48px;
+    color: $bg-light-green;
+  }
+
+  &__content {
+    margin-left: 15px;
+  }
+
+  &__title {
+    @include font-mazzard(600, 14px, $color-dark);
+    letter-spacing: 2.4px;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    @include font-mazzard(400, 20px, $bg-light-green);
+  }
+
+  &__email {
+    @include font-mazzard(400, 20px, $color-dark);
+    border-bottom: 1px solid $bg-light-green;
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint-down($max-md) {
+  .about-contact__item {
+    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .about-contact__inner {
+    text-align: center;
+  }
+}

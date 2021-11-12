@@ -1,0 +1,13 @@
+.header-top {
+  padding: 22px 0;
+  
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@include breakpoint-down($max-md) {
+  .header-top {
+    display: none;
+  }
+}

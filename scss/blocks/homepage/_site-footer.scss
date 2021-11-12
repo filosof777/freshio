@@ -1,0 +1,54 @@
+.site-footer {
+
+  &__inner {
+    padding: 60px 0;
+  }
+
+  &__title {
+    @include font-mazzard(600, 12px, $color-dark);
+    letter-spacing: 2.4px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include font-mazzard(400, 14px, $color-dark);
+  }
+
+  &__white-text {
+    @include font-mazzard(400, 14px, #aaa);
+    margin-bottom: 0;
+  }
+
+  &__time-text {
+    @include font-mazzard(400, 14px, $color-dark);
+    margin-bottom: 0;
+  }
+
+  &__list {
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    @include font-mazzard(400, 14px, #555);
+  }
+
+  &__payment-img {
+    margin-bottom: 40px;
+  }
+
+  &__copy {
+    @include font-mazzard(400, 14px, #555);
+    border-top: 1px solid #e2e2e2;
+  }
+
+  &__copy-green {
+    color: $bg-light-green;
+  }
+}

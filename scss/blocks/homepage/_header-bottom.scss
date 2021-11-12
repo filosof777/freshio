@@ -1,0 +1,241 @@
+.header-bottom {
+  
+  &__content {
+    padding: 0px 30px;
+    background-color: $bg-green;
+    position: relative;
+  }
+}
+
+.header-menu {
+
+  &__btn {
+    @include border-bg-none;
+    @include font-mazzard(400, 14px, #fff);
+    width: 295px;
+    text-align: start;
+  }
+
+  &__btn-icon {
+    margin-right: 15px;
+  }
+
+  &__dropdown-list {
+    padding: 10px 20px 20px 20px;
+    min-width: 295px;
+    transform: translate(-30px, 40px) !important;
+    position: absolute !important;
+    box-shadow: 0 5px 5px 0 #2c2929;
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: #fff;
+      position: absolute;
+      top: -2.5px;
+      left: 30px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__dropdown-item {
+    padding: 13px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s ease;
+  
+    &:hover .header-menu__dropdown-link,
+    &:hover .header-menu__dropdown-icon {
+      color: $bg-light-green;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    &:nth-child(2)::after,
+    &:nth-child(3)::after,
+    &:nth-child(5)::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-top: 2px solid #acaaa6;
+      border-right: 2px solid #acaaa6;
+      transform: rotate(45deg);
+      transition: border-color 0.3s ease;
+    }
+
+    &:hover:after {
+      border-color: $bg-light-green;
+    }
+  }
+
+  &__dropdown-link {
+    @include font-mazzard(400, 14px, #000);
+  }
+
+  &__dropdown-icon {
+    font-size: 18px;
+    color: #acaaa6;
+    margin-right: 15px;
+  }
+
+  &__accordion-collapse {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 213px;
+    padding: 10px 20px;
+    background-color: red;
+  }
+}
+
+.header-nav {
+
+  &__list {
+    position: relative;
+    margin-left: 80px;
+  }
+
+  &__item {
+    padding: 22px 0;
+
+    &:hover .header-nav__home-list,
+    &:hover .header-nav__shop,
+    &:hover .header-nav__pages {
+      opacity: 1;
+      z-index: 20;
+      transform: translateY(0);
+    }
+
+    &:not(:first-child) {
+      margin-left: 35px;
+    }
+  }
+
+  &__home-list {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    transform: translateY(10px);
+    z-index: -20;
+    opacity: 0;
+    width: 185px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 $color-dark;
+    transition: opacity 0.4s ease,
+                z-index 0.4s ease,
+                transform 0.4s ease;
+  }
+
+  &__home-item {
+    padding: 3px 0;
+
+    &:hover .header-nav__home-link {
+      color: $bg-light-green;
+    }
+  }
+
+  &__home-link {
+    @include font-mazzard(400, 14px, $color-dark);
+    transition: color 0.4s ease;
+  }
+
+  &__icon {
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  &__shop,
+  &__pages {
+    position: absolute;
+    top: 68px;
+    left: -110px;
+    width: 965px;
+    transform: translateY(10px);
+    background-color: #fff;
+    transition: all 0.4s ease;
+    z-index: -20;
+    opacity: 0;
+    padding: 20px;
+    box-shadow: 0 0 5px 0 $color-dark;
+  }
+
+  &__shop-title {
+    margin-bottom: 5px;
+    @include font-mazzard(700, 14px, $color-dark);
+  }
+
+  &__shop-item {
+    padding: 3px 0;
+  }
+
+  &__shop-link {
+    @include font-mazzard(400, 14px, $color-dark);
+  }
+
+  &__pages-item {
+    padding: 0 10px;
+
+    &:hover .header-nav__pages-img {
+      transform: translateY(0);
+      border-color: $bg-light-green;
+    }
+  }
+  
+  &__pages-img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #eaeaea;
+    transform: translateY(5px);
+    transition: transform 0.4s ease,
+                border-color 0.4s ease;
+  }
+}
+
+@include breakpoint-down(1280px) {
+  .header-nav__shop,
+  .header-nav__pages {
+    width: 750px;
+    left: -200px;
+  }
+}
+
+@include breakpoint-down($max-md) {
+  .header-bottom {
+
+    &__content {
+      padding: 17px 45px;
+    }
+
+    &__menu {
+      width: 100%;
+    }
+  }
+  .header-menu {
+
+    &__accordion-collapse {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+
+    &__dropdown-list {
+      width: calc(100% + 52px);
+      position: relative !important;
+      transform: translate(-27px, 5px) !important;
+    }
+    
+    &__btn-group {
+      display: block;
+    }
+    
+  }
+}

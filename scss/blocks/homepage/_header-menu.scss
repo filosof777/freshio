@@ -1,0 +1,83 @@
+.header-menu {
+
+  &__list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    background-color: #fff;
+    z-index: 5;
+    border-top: 1px solid #ebebeb;
+  }
+
+  &__item {
+    @include border-bg-none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    &:not(:last-child) {
+      border-right: 1px solid #ebebeb;
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+    position: relative;
+  }
+
+  &__link {
+    @include font-mazzard(700, 12px, $bg-green);
+
+    &:hover {
+      color: $bg-green;
+    }
+  }
+
+  &__number {
+    @include font-mazzard(400, 12px, $bg-light);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e0bf96;
+  }
+
+  &__site-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $bg-light-green;
+    border-radius: 50%;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+      background-color: $bg-green;
+    }
+  }
+  &__site-scroll-top .fal {
+    color: $bg-light;
+  }
+}
+
+@include breakpoint-down($max-md) {
+  .header-menu__site-scroll-top {
+    bottom: 80px;
+  }
+}

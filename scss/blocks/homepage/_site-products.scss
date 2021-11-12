@@ -1,0 +1,232 @@
+.site-product {
+
+  &__content {
+    position: relative;
+    padding: 60px 0 80px 0;
+    
+
+    &:hover .site-product__nav-btn-left,
+    &:hover .site-product__nav-btn-right {
+      transform: translateX(0px);
+      opacity: 1;
+      z-index: 50
+    }
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav-btn-left,
+  &__nav-btn-right {
+    @include border-bg-none;
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+    opacity: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #fff;
+    color: $color-dark;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e2e2;
+    transition: color 0.3s ease, 
+                background-color 0.3s ease,
+                transform 0.3s ease,
+                opacity 0.3s ease,
+                z-index 0.3s ease;
+
+    &:hover {
+      color: $bg-light;
+      background-color: $bg-light-green;
+    }
+  }
+
+
+  &__nav-btn-left {
+    left: 0;
+    transform: translateX(-40px);
+  }
+
+  &__nav-btn-right {
+    right: 0;
+    transform: translateX(40px);
+  }
+
+  &__title {
+    @include font-mazzard(400, 30px, #0a472e);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      @include before-after(15px, 15px);
+      border-radius: 50%;
+      border: 1px solid $bg-light-green;
+      background-color: $bg-light;
+      margin-right: 10px;
+    }
+    
+  }
+
+  &__link {
+    @include font-mazzard(700, 12px, $bg-light-green);
+    line-height: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bac34e;
+    display: flex;
+    align-items: center;
+
+    &:hover .site-product__link-icon {
+      transform: translateX(5px);
+    }
+  }
+  
+  &__link-icon {
+    transform: translateX(0);
+    margin-left: 5px;
+    font-size: 8px;
+    transition: transform 0.4s ease;
+  }
+
+  &__item {
+    position: relative;
+    width: 330px;
+    padding: 0 15px;
+
+    &:hover .site-product__orange-text::after {
+      width: 100px;
+    }
+
+    &:hover .site-product__inner-nav {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+
+    .site-product__img-second{
+      position: absolute;
+      top: 1px;
+      left: 32px;
+      z-index: 5;
+      opacity: 0;
+      width: 258px;
+      transform: rotateY(-90deg);
+      transition: all 0.4s ease;
+    }
+    &:hover{
+      .site-product__img-second{
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__flags-list {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 500;
+  }
+
+  &__flags-item {
+    margin: 2px 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 15px;
+    width: max-content;
+    pointer-events: none;
+    padding: 4px 18px 3px 10px;
+    border-radius: 5px 0 32px 0;
+    color: #fff;
+
+    &:nth-child(1) {
+      background-color: #0791d6;
+    }
+
+    &:nth-child(2) {
+      background-color: #bac34e;
+    }
+  }
+
+  &__inner {
+    padding: 0 15px 40px 15px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+  }
+
+  &__inner-nav {
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 0.4s ease,
+                opacity 0.4s ease;
+  }
+
+  &__inner-btn {
+    @include border-bg-none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    color: $bg-green;
+    transition: color 0.4s ease,
+                background-color 0.4s ease;
+
+    &:hover {
+      background-color: $bg-green;
+      color: $bg-light;
+    } 
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__green-text {
+    @include font-mazzard(400, 14px, $bg-light-green);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font-mazzard(400, 14px, $color-dark);
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+
+  &__orange-text {
+    @include font-mazzard(400, 16px, #e0bf96);
+    margin-bottom: 0;
+    
+    &::after {
+      @include before-after(50px, 2px);
+      display: block;
+      background-color: #e0bf96;
+      margin: 20px auto;
+      justify-content: center;
+      transition: width 0.4s ease;
+    }
+  }
+
+  &__inner-link {
+
+    &:hover .site-hero__carousel-btn-icon {
+      transform: translateX(5px);
+    }
+    @include font-mazzard(700, 12px, $color-dark);
+    text-transform: uppercase;
+  }
+}
+
+@include breakpoint-down($max-xs) {
+  .site-product__nav {
+    flex-direction: column;
+  }
+}

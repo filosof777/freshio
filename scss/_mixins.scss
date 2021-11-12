@@ -3,7 +3,7 @@
   margin: 0;
   list-style: none;
 }
-
+// media
 @mixin breakpoint-down($max-lg) {
   @media only screen and (max-width: $max-lg) {
     @content;
@@ -15,39 +15,41 @@
     @content;
   }
 }
-
-@mixin before-after ($bg-repeat: no-repeat, 
-                     $bg-size: contain,
-                     $inline-block: inline-block, 
-                     $widths: 300px, 
+// before after
+@mixin before-after ($widths: 300px, 
                      $heights: 100px 
                      ) {
   content: "";
-  background-repeat: $bg-repeat;
-  background-size: $bg-size;
-  display: $inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
   width: $widths;
   height: $heights;
 }
 
-@mixin font-body ($ft-family: $font-body,
-                  $ft-weight: 400,
-                  $ft-size: 16px,
-                  $ft-color: #000) {
+@mixin font-mazzard ($ft-weight: 400,
+                     $ft-size: 16px,
+                     $ft-color: #000) {
   
-  font-family: $ft-family;
+  font-family: $font-mazzard;
   font-weight: $ft-weight;
   font-size: $ft-size;
   color: $ft-color;
 }
 
-@mixin font-inter ($ft-family: $font-inter,
-              $ft-weight: 400,
-              $ft-size: 16px,
-              $ft-color: #000) {
+@mixin font-greatest ($ft-weight: 400,
+                   $ft-size: 16px,
+                   $ft-color: #000) {
   
-  font-family: $ft-family;
+  font-family: $font-greatest;
   font-weight: $ft-weight;
   font-size: $ft-size;
   color: $ft-color;
 }
+
+@mixin border-bg-none {
+  border: none;
+  background-color: transparent;
+}
+
+// text links

@@ -1,0 +1,142 @@
+.site-testemonials {
+
+  &__content {
+
+    &:nth-child(1) {
+      margin-bottom: 40px;
+
+      .site-testemonials__desc {
+        padding: 0 80px;
+        
+      }
+    }
+
+    &:nth-child(2) {
+      padding-bottom: 80px;
+
+      .site-testemonials {
+
+        &__inner {
+          display: flex;
+          
+          &::before {
+            @include before-after(48px, 38px);
+            background-size: contain;
+            padding-right: 60px;
+            background-image: url("../../../img/quote.png"); 
+          }
+        }
+
+        &__desc {
+          padding: 0 60px 0 80px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__title {
+    @include font-mazzard(400, 30px, $bg-green);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include font-mazzard(400, 14px, #555);
+  }
+
+  &__text-white {
+    @include font-mazzard(400, 14px, #aaa);
+  }
+
+  &__link {
+    @include font-mazzard(700, 12px, $bg-light-green);
+    border-bottom: 1px solid $bg-light-green;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: $bg-light-green;
+    }
+
+    &:hover .site-testemonials__link-icon {
+      transform: translateX(5px);
+    }
+  }
+
+  &__link-icon {
+    transform: translateX(0);
+    margin-left: 1px;
+    font-size: 7px;
+    transition: transform 0.3s ease;
+  }
+
+  &__carousel-indicators {
+    position: relative !important;
+  }
+
+  &__btn {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn.active {
+    background-color: $bg-green;
+  }
+}
+
+@include breakpoint-down($max-md) {
+  .site-testemonials {
+
+    &__content {
+  
+      &:nth-child(1) {
+        margin-bottom: 40px;
+  
+        .site-testemonials__desc {
+          padding: 0;
+          
+        }
+      }
+  
+      &:nth-child(2) {
+        padding-bottom: 40px;
+  
+        .site-testemonials {
+
+          &__inner {
+            padding-top: 20px;
+          }
+  
+          &__desc {
+            padding: 0 0 0 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down($max-sm) {
+  .site-testemonials {
+
+    &__content {
+  
+      &:nth-child(2) {
+        padding-bottom: 20px;
+  
+      .site-testemonials__desc {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
+}

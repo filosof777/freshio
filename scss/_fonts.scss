@@ -1,1 +1,124 @@
 /* FONTS */
+
+// font mazzard
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Black.eot');
+  src: local('Mazzard H Black'), local('MazzardH-Black'),
+      url('../fonts/mazzard/MazzardH-Black.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Black.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Medium.eot');
+  src: local('Mazzard H Medium'), local('MazzardH-Medium'),
+      url('../fonts/mazzard/MazzardH-Medium.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Medium.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-ExtraLight.eot');
+  src: local('Mazzard H ExtraLight'), local('MazzardH-ExtraLight'),
+      url('../fonts/mazzard/MazzardH-ExtraLight.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-ExtraLight.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Light.eot');
+  src: local('Mazzard H Light'), local('MazzardH-Light'),
+      url('../fonts/mazzard/MazzardH-Light.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Light.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Thin.eot');
+  src: local('Mazzard H Thin'), local('MazzardH-Thin'),
+      url('../fonts/mazzard/MazzardH-Thin.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Thin.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Bold.eot');
+  src: local('Mazzard H Bold'), local('MazzardH-Bold'),
+      url('../fonts/mazzard/MazzardH-Bold.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Bold.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-Regular.eot');
+  src: local('Mazzard H Regular'), local('MazzardH-Regular'),
+      url('../fonts/mazzard/MazzardH-Regular.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-Regular.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-SemiBold.eot');
+  src: local('Mazzard H SemiBold'), local('MazzardH-SemiBold'),
+      url('../fonts/mazzard/MazzardH-SemiBold.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-SemiBold.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('MazzardH-ExtraBold.eot');
+  src: local('Mazzard H ExtraBold'), local('MazzardH-ExtraBold'),
+      url('../fonts/mazzard/MazzardH-ExtraBold.eot') format('embedded-opentype'),
+      url('../fonts/mazzard/MazzardH-ExtraBold.woff2') format('woff2'),
+      url('../fonts/mazzard/MazzardH-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+// font greatest
+
+@font-face {
+  font-family: "Dancing";
+  src: url("../fonts/greatest/DancingScript-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Dancing";
+  src: url("../fonts/greatest/DancingScript-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Dancing";
+  src: url("../fonts/greatest/DancingScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dancing";
+  src: url("../fonts/greatest/DancingScript-SemiBold.ttf");
+}

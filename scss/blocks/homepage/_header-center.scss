@@ -1,0 +1,421 @@
+.header-center {
+  padding: 25px 0;
+
+  &__logo {
+    width: 130px;
+    height: 70px;
+  }
+
+  &__form {
+    width: 550px;
+    height: 45px;
+    padding-right: 100px;
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+
+    &::before {
+      @include before-after(24px, 24px);
+      background-image: url("../../../img/search.svg");
+      background-position: center center;
+      margin: 0 17px;
+    }
+  }
+
+  &__input {
+    @include border-bg-none;
+    @include font-mazzard(400, 14px, #aaa);
+    line-height: 45px;
+    height: 45px;
+    width: 100%;
+  }
+
+  &__form-btn {
+    @include border-bg-none;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+  }
+
+  &__item {
+
+    &:nth-child(1) .header-center__item-btn {
+      background-color: #e8f8f7;
+    }
+
+    &:nth-child(2) .header-center__item-btn {
+      background-color: #f6f3e3;
+    }
+
+    &:nth-child(3) .header-center__item-btn {
+      background-color: #f3e4dc;
+    }
+
+    &:not(:first-child) {
+      margin-left: 17px;
+    }
+  }
+
+  &__item-btn {
+    @include border-bg-none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .header-center__item-btn:hover {
+    background-color: #bac34e;
+    color: $bg-light;
+  }
+
+  &__count {
+    position: absolute;
+    top: 0;
+    right: -9px;
+    width: 20px;
+    height: 20px;
+    background-color: #e0bf96;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @include font-mazzard(400, 10px, $bg-light);
+  }
+}
+
+// right offcanvas
+
+.header-modal {
+
+  &__offcanvas {
+    width: 300px;
+  }
+
+  &__offcanvas-header {
+    padding: 30px 20px;
+  }
+
+  &__btn-close {
+    @include border-bg-none;
+    width: 45px;
+    height: 45px;
+    color: #666;
+
+    &:hover {
+      color: #bac34e;
+    }
+  }
+
+  &__close-icon {
+    font-size: 24px;
+  }
+
+  &__green-text {
+    @include font-mazzard(400, 16px, $bg-light-green);
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 30px 8px 16px;
+    margin-bottom: 16px;
+    @include font-mazzard(400, 14px, #000);
+    border: 1px solid #e2e2e2;
+    outline-color: $bg-light-green;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  &__label {
+    width: 100%;
+  }
+
+  &__label-password {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    font-size: 24px;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &__check-label {
+    @include font-mazzard(400, 12px, #414141);
+  }
+
+  &__input-check {
+    margin-right: 7px;
+  }
+
+  &__check-content {
+    margin-bottom: 16px;
+  }
+
+  &__accordion-button {
+    @include border-bg-none;
+    @include font-mazzard(400, 12px, #414141);
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $bg-light-green;
+    }
+  }
+
+  &__accardion-btn {
+    @include font-mazzard(700, 12px, $bg-light);
+    border-radius: 40px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 10px 15px;
+    background-color: $bg-light-green;
+    transition: background-color 0.3s ease;
+    margin-bottom: 16px;
+
+    &:active {
+      background-color: $bg-green;
+    }
+  }
+
+  &__accardion-text {
+    @include font-mazzard(400, 18px, #0a472e);
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease, 
+                border-color 0.4s ease,
+                color 0.4s ease;
+
+    &:nth-child(1) {
+      background-color: #4C68A2;
+      color: #fff;
+      border-color: #4C68A2;
+
+      &:hover {
+        background-color: transparent;
+        border-color: #4C68A2;
+      }
+
+      &:hover .header-modal__link {
+        color: #4C68A2;
+      }
+    } 
+
+    &:nth-child(2) {
+      background-color: #4285f4;
+      color: #fff;
+      border-color: #4285f4;
+
+      &:hover {
+        background-color: transparent;
+        border-color: #4285f4;
+      }
+
+      &:hover .header-modal__link {
+        color: #4285f4;
+      }
+    } 
+
+    &:nth-child(3) {
+      background-color: #53d1f8;
+      color: #fff;
+      border-color: #53d1f8;
+
+      &:hover {
+        background-color: transparent;
+        border-color: #53d1f8;
+      }
+
+      &:hover .header-modal__link {
+        color: #53d1f8;
+      }
+    } 
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    color: #fff;
+  }
+
+  &__lang {
+    padding: 20px 0 50px 0;
+  }
+
+  &__lang-text {
+    @include font-mazzard(700, 14px, #aaa);
+    margin-bottom: 10px;
+  }
+
+  &__lang-list {
+    width: 78px;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__lang-item {
+    line-height: 0 !important;
+    height: 17px;
+    padding: 2px 4px;
+
+    &--active {
+      border: 1px solid $bg-light-green;
+    }
+  }
+  
+  &__lang-link {
+    line-height: 0 !important;
+  }
+
+  &__lang-btn {
+    @include border-bg-none;
+    @include font-mazzard(400, 13px, #aaa);
+    padding: 0 5px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $bg-light-green;
+    }
+
+    &--active {
+      color: $bg-light-green;
+    }
+  }
+
+  &__account-list {
+    border-left: 1px solid #aaa;
+    padding: 0 16px;
+  }
+
+  &__account-item {
+    margin-bottom: 6px;
+  }
+
+  &__account-link {
+    @include font-mazzard(400, 13px, #aaa);
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $bg-light-green;
+    }
+  }
+
+  &__account-icon {
+    margin-right: 5px;
+  }
+}
+
+
+@include breakpoint-down($max-md) {
+  .header-center {
+    padding: 10px 0;
+
+		&__menu-btn {
+      @include border-bg-none;
+      width: 40px;
+      height: 40px;
+		}
+    
+		&__ofcanvas-inner {
+      background-color: $bg-green;
+      max-width: 300px;
+		}
+
+		&__offcanvas-header {
+      justify-content: end;
+      padding: 15px;
+      border-bottom: 1px solid #073522;
+		}
+
+		&__btn-close {
+      @include border-bg-none;
+      @include font-mazzard(400, 14px, #bac34e !important);
+    }
+    
+    &__close-icon {
+      margin-right: 4px;
+    }
+
+		&__form {
+      display: none;
+		}
+
+		&__item {
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+
+      &:not(:last-child) {
+        display: none;
+      }
+		}
+
+    &__offcanvas-item {
+      position: relative;
+      padding: 15px;
+      height: 48px;
+      border-bottom: 1px solid #073522;
+
+      &:hover .header-center__offcanvas-link {
+        color: #bac34e;
+      }
+    }
+  
+    &__offcanvas-link {
+      @include font-mazzard(400, 14px, $bg-light);
+      @include border-bg-none;
+      text-transform: capitalize;
+      transition: color 0.4s ease;
+    }
+
+    &__ofcanvas-arrow-btn {
+      @include border-bg-none;
+    }
+  
+    &__offcanvas-icon {
+      font-size: 10px;
+      color: $bg-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      
+      &::after {
+        @include before-after(1px, 48px);
+        position: absolute;
+        top: 0;
+        right: 42px;
+        background-color: #073522;
+      }
+    }
+  }
+}

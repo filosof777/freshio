@@ -1,0 +1,220 @@
+.site-hero {
+  
+  &__list {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    
+    &:nth-child(1) {
+      height: auto;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+  }
+
+  &__carousel-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  &__carousel-item:nth-child(1) {
+    background-image: url("../../../img/food-1.jpg");
+  }
+  
+  &__carousel-item:nth-child(2) {
+    background-image: url("../../../img/food-3.jpg");
+  }
+  // calc(40px + (((40 - 24) * 2) * 0.8 ) * ((100vw - 320px) / 1200))
+  &__carousel-desc {
+    position: absolute;
+    top: 10%;
+    left: 110px;
+  }
+  
+  &__carousel-title {
+    @include font-mazzard(400, 40px, $color-dark);
+    padding-bottom: 10%;
+    max-width: 350px;
+    text-transform: capitalize;
+  }
+
+  &__carousel-text {
+    @include font-greatest(700, 24px, $bg-light-green);
+  }
+
+  &__carousel-btn {
+    @include font-mazzard(700, 12px, $color-dark);
+   
+    text-transform: capitalize;
+    display: inline-block;
+    align-items: center;
+    border-bottom: 1px solid $color-dark;
+    transition: color 0.4s ease,
+                border-color 0.4s ease;
+
+    &:hover {
+      color: $bg-light-green;
+      border-color: $bg-light-green;
+    }
+
+    &:hover .site-hero__carousel-btn-icon {
+      transform: translateX(5px);
+    }
+  }
+
+  &__carousel-btn-icon {
+    margin-left: 5px;
+    transform: translateX(0px);
+    transition: transform 0.4s ease;
+  }
+
+  &__carousel-slide {
+    position: absolute;
+    bottom: 40px;
+    right: 56px;
+  }
+
+  &__carousel-control-prev,
+  &__carousel-control-next {
+    z-index: 1;
+    background-color: #fff !important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: $color-dark;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $bg-light-green !important;
+    }
+  }
+
+  &__inner-content {
+    position: relative;
+    
+    &:not(:last-child) {
+      padding-bottom: 14px;
+    }
+  }
+
+  &__inner-desc {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+  
+  &__inner-title {
+    @include font-mazzard(400, 24px, $color-dark);
+    max-width: 155px;
+    text-transform: capitalize;
+    padding-bottom: 110px;
+  }
+
+  &__inner-btn {
+    @include font-mazzard(700, 12px, $color-dark);
+    text-transform: capitalize;
+    align-items: center;
+    border-bottom: 1px solid $color-dark;
+    transition: color 0.4s ease,
+                border-color 0.4s ease;
+
+    &:hover {
+      color: $bg-light-green;
+      border-color: $bg-light-green;
+    }
+
+    &:hover .site-hero__carousel-btn-icon {
+      transform: translateX(5px);
+    }
+  }
+
+  &__inner-section {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__inner-subtext {
+    @include font-greatest(700, 24px, $bg-light);
+    text-transform: capitalize;
+  }
+  &__inner-number {
+    @include font-mazzard(400, 40px, #f4ed23);
+  }
+  &__inner-desc-text {
+    @include font-mazzard(400, 14px, $bg-light);
+  }
+  &__inner-link {
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color: $bg-light-green;
+    @include font-mazzard(700, 12px, $bg-light);
+    text-transform: capitalize;
+    align-items: center;
+    transition: color 0.4s ease,
+                background-color 0.4s ease;
+
+    &:hover {
+      color: $bg-light-green;
+      background-color: $bg-light;
+    }
+
+    &:hover .site-hero__carousel-btn-icon {
+      transform: translateX(5px);
+    }
+  }
+}
+
+@include breakpoint-down($max-xs) {
+  .site-hero {
+
+    &__carousel-control-prev,
+    &__carousel-control-next {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+
+@include breakpoint-down($max-md) {
+  .site-hero {
+
+    &__carousel-desc {
+      left: 50px;
+    }
+		
+    &__carousel-title {
+      width: 200px;
+      font-size: 24px;
+    }
+  
+    &__carousel-slide {
+      position: absolute;
+      bottom: 32px;
+      right: 24px;
+    }
+
+    &__carousel-control-prev,
+    &__carousel-control-next {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
